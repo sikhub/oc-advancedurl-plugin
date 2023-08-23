@@ -1,0 +1,37 @@
+.advanced-url .flex { display: flex; }
+.advanced-url .w-full { width: 100%; }
+
+.advanced-url .form-control {
+}
+
+.advanced-url label.form-label {
+    font-size: 12px;
+    margin-top: 0.7rem;
+}
+
+.advanced-url label.form-label:first-child {
+    margin-top: 0;
+}
+
+.advanced-url .types {
+    width: 30%;
+}
+
+.advanced-url input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.advanced-url .types .select2-selection {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.advanced-card {
+    display: none;
+}
+
+.target {
+    display: flex;
+    gap: .5rem;
+}

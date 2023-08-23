@@ -1,0 +1,8 @@
+{
+    "name": "sikhub/oc-advancedurl",
+    "type": "october-plugin",
+    "description": "Form widgets for advanced urls",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

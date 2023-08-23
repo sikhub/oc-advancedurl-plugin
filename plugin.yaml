@@ -1,0 +1,6 @@
+plugin:
+    name: 'sikhub.advancedurl::lang.plugin.name'
+    description: 'sikhub.advancedurl::lang.plugin.description'
+    author: Sikhuh
+    icon: oc-icon-external-link
+    homepage: ''
