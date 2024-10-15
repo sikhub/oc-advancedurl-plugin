@@ -13,7 +13,7 @@
             <div data-control="balloon-selector" class="control-balloon-selector">
                 <ul>
                     <?php foreach ($targets as $key => $target): ?>
-                        <li data-value="_self" value="<?= $target ?>" class=""><?= $key ?></li>
+                        <li data-value="<?= $target ?>" value="<?= $target ?>" class="<?= ($target == $value['target']) ? 'active' : ''; ?>"><?= $key ?></li>
                     <?php endforeach; ?>
                 </ul>
 
