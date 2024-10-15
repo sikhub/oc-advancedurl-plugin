@@ -26,7 +26,9 @@
                     <!-- Dropdown -->
                     <select id="<?= $this->getId('select') ?>" name="<?= $name ?>[type]" class="form-control custom-select select-no-search" data-select2-id="select2-data-Form-field-<?= $name ?>" tabindex="-1" aria-hidden="true" data-disposable="">
                         <?php foreach ($types as $key => $type): ?>
-                            <option selected="selected" value="<?= $key ?>" data-select2-id="<?= "select2-data-" . $key . "-" . md5($name . $type) ?>"><?= $type ?></option>
+                            <option <?= ($key == $value['type']) ? 'selected="selected"' : ''; ?> value="<?= $key ?>" data-select2-id="<?= 'select2-data-' . $key . '-' . md5($name . $type) ?>">
+                                <?= $type ?>
+                            </option>
                         <?php endforeach; ?>
                     </select>
                 </div>
