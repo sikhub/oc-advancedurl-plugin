@@ -42,6 +42,7 @@ class AdvancedUrl extends FormWidgetBase
         $this->vars['id'] = $this->model->id;
         $this->vars['name'] = $this->formField->getName();
         $this->vars['value'] = $this->getLoadValue();
+        $this->vars['value']['type'] ??= null;
         $this->vars['model'] = $this->model;
     }
 
