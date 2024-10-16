@@ -31,10 +31,10 @@ class AdvancedUrl extends FormWidgetBase
         ];
 
         $this->vars['types'] = [
-            'http' => 'http://',
-            'https' => 'https://',
-            'mailto' => 'mailto:',
-            'tel' => 'tel:',
+            'http://' => 'http://',
+            'https://' => 'https://',
+            'mailto:' => 'mailto:',
+            'tel:' => 'tel:',
         ];
 
         $this->vars['download'] = false;
@@ -42,7 +42,7 @@ class AdvancedUrl extends FormWidgetBase
         $this->vars['id'] = $this->model->id;
         $this->vars['name'] = $this->formField->getName();
         $this->vars['value'] = $this->getLoadValue();
-        $this->vars['value']['type'] ??= 'https';
+        $this->vars['value']['type'] ??= 'https://';
         $this->vars['value']['target'] ??= '_blank';
         $this->vars['model'] = $this->model;
     }
