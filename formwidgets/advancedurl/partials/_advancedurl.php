@@ -56,6 +56,17 @@
                     autocomplete="off" />
             </div>
 
+            <div>
+                <label class="form-label">Css classes:</label>
+                <input
+                    type="text"
+                    id="<?= $this->getId('css_classes') ?>"
+                    name="<?= $name ?>[css_classes]"
+                    value="<?= $value['css_classes'] ?? '' ?>"
+                    class="form-control"
+                    autocomplete="off" />
+            </div>
+
         </div>
     </div>
 <?php endif ?>
