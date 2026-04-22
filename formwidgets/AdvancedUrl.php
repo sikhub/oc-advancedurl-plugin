@@ -32,7 +32,7 @@ class AdvancedUrl extends FormWidgetBase
         ];
 
         $this->vars['types'] = [
-            '' => 'Relevant',
+            '' => 'Relative',
             'http://' => 'http://',
             'https://' => 'https://',
             'mailto:' => 'mailto:',
