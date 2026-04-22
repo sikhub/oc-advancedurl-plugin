@@ -1,4 +1,6 @@
-<?php namespace sikhub\AdvancedUrl;
+<?php
+
+namespace sikhub\AdvancedUrl;
 
 use Sikhub\AdvancedUrl\FormWidgets\AdvancedUrl;
 use System\Classes\PluginBase;

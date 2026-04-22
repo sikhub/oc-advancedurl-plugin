@@ -1,10 +1,10 @@
-<?php if ($this->previewMode): ?>
+<?php if ($this->previewMode) { ?>
 
     <div class="form-control">
         <?= $this->getId('label') ?>
     </div>
 
-<?php else: ?>
+<?php } else { ?>
 
     <div class="form-preview">
         <div class="advanced-url">
@@ -12,9 +12,9 @@
             <label class="form-label" for="">Odpri povezavo v:</label>
             <div data-control="balloon-selector" class="control-balloon-selector">
                 <ul>
-                    <?php foreach ($targets as $key => $target): ?>
+                    <?php foreach ($targets as $key => $target) { ?>
                         <li data-value="<?= $target ?>" value="<?= $target ?>" class="<?= ($target == $value['target']) ? 'active' : ''; ?>"><?= $key ?></li>
-                    <?php endforeach; ?>
+                    <?php } ?>
                 </ul>
 
                 <input type="hidden" name="<?= $name ?>[target]" value="<?= $value['target'] ?? '' ?>" />
@@ -25,11 +25,11 @@
                     <label class="form-label">Vrsta povezave:</label>
                     <!-- Dropdown -->
                     <select id="<?= $this->getId('select') ?>" name="<?= $name ?>[type]" class="form-control custom-select select-no-search" data-select2-id="select2-data-Form-field-<?= $name ?>" tabindex="-1" aria-hidden="true" data-disposable="">
-                        <?php foreach ($types as $key => $type): ?>
+                        <?php foreach ($types as $key => $type) { ?>
                             <option <?= ($key == $value['type']) ? 'selected="selected"' : ''; ?> value="<?= $key ?>" data-select2-id="<?= 'select2-data-' . $key . '-' . md5($name . $type) ?>">
                                 <?= $type ?>
                             </option>
-                        <?php endforeach; ?>
+                        <?php } ?>
                     </select>
                 </div>
 
@@ -69,4 +69,4 @@
 
         </div>
     </div>
-<?php endif ?>
+<?php } ?>

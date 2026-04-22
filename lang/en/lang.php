@@ -1,6 +1,8 @@
-<?php return [
+<?php
+
+return [
     'plugin' => [
         'name' => 'Advanced URL',
-        'description' => ''
-    ]
+        'description' => '',
+    ],
 ];

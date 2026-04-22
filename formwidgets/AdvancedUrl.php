@@ -1,4 +1,6 @@
-<?php namespace Sikhub\AdvancedUrl\FormWidgets;
+<?php
+
+namespace Sikhub\AdvancedUrl\FormWidgets;
 
 use Backend\Classes\FormWidgetBase;
 
@@ -11,13 +13,12 @@ class AdvancedUrl extends FormWidgetBase
 {
     protected $defaultAlias = 'advancedurl_advanced_url';
 
-    public function init()
-    {
-    }
+    public function init() {}
 
     public function render()
     {
         $this->prepareVars();
+
         return $this->makePartial('advancedurl');
     }
 
@@ -31,6 +32,7 @@ class AdvancedUrl extends FormWidgetBase
         ];
 
         $this->vars['types'] = [
+            '' => 'Relevant',
             'http://' => 'http://',
             'https://' => 'https://',
             'mailto:' => 'mailto:',
