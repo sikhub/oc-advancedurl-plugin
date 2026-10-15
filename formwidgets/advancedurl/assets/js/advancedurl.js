@@ -1,13 +1,22 @@
 +function ($) { "use strict";
 
-    const $advancedToggle = $('.advanced-toggle')
-    const $advancedCard = $('.advanced-card')
+    // files and external URLs open in a new tab by default, everything else in the same tab
+    var NEW_TAB_KINDS = ['media', 'https://', 'http://'];
 
-    $(window).on($advancedToggle, 'click', function(e) {
-        e.preventDefault()
-        $advancedCard.toggle()
-    })
+    function sectionFor(kind) {
+        return kind === 'page' || kind === 'media' ? kind : 'url';
+    }
 
-    console.log("test")
+    $(document).on('change', '[data-advanced-url-kind]', function () {
+        var $root = $(this).closest('[data-advanced-url]'),
+            kind = $(this).val() || '',
+            target = NEW_TAB_KINDS.indexOf(kind) !== -1 ? '_blank' : '_self';
+
+        $root.find('[data-advanced-url-section]').each(function () {
+            $(this).toggle($(this).attr('data-advanced-url-section') === sectionFor(kind));
+        });
+
+        $root.find('.control-balloon-selector li[data-value="' + target + '"]').trigger('click');
+    });
 
 }(window.jQuery);
