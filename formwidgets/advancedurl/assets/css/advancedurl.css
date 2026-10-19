@@ -1,37 +1,108 @@
-.advanced-url .flex { display: flex; }
-.advanced-url .w-full { width: 100%; }
-
-.advanced-url .form-control {
-}
-
-.advanced-url label.form-label {
-    font-size: 12px;
-    margin-top: 0.7rem;
-}
-
-.advanced-url label.form-label:first-child {
-    margin-top: 0;
-}
-
-.advanced-url .types {
-    width: 30%;
-}
-
-.advanced-url input {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.advanced-url .types .select2-selection {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-}
-
-.advanced-card {
-    display: none;
-}
-
-.target {
+/* one row: kind | page, URL or file | target | CSS classes */
+.advanced-url-row {
     display: flex;
-    gap: .5rem;
+    align-items: stretch;
+}
+
+.advanced-url-kind {
+    flex: 0 1 190px;
+    min-width: 120px;
+}
+
+.advanced-url-value {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.advanced-url-target {
+    flex: 0 0 135px;
+}
+
+.advanced-url-row > .advanced-url-toggle {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+/* joined controls: only the outer corners are rounded */
+.advanced-url-row .form-control,
+.advanced-url-row .select2-selection,
+.advanced-url-row .btn,
+.advanced-url-row .input-group > * {
+    border-radius: 0;
+}
+
+.advanced-url-row > :first-child .form-control,
+.advanced-url-row > :first-child .select2-selection {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.advanced-url-row > :last-child,
+.advanced-url-row > :last-child .form-control,
+.advanced-url-row > :last-child .select2-selection {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.advanced-url-row > * + * {
+    margin-left: -1px;
+}
+
+.advanced-url-row > .advanced-url-toggle {
+    background: #fff;
+    border: 1px solid #d1d6d9;
+    color: #6c757d;
+    padding: 0 12px;
+}
+
+.advanced-url-row > .advanced-url-toggle:hover,
+.advanced-url-row > .advanced-url-toggle.active {
+    color: #1b65d6;
+}
+
+/* page finder in one line: record name shortened, toolbar buttons as icons */
+.advanced-url .field-pagefinder {
+    height: 100%;
+}
+
+.advanced-url .field-pagefinder .pagefinder-control-container {
+    height: 100%;
+    flex-wrap: nowrap;
+}
+
+.advanced-url .field-pagefinder .pagefinder-record-container {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.advanced-url .field-pagefinder .record-item {
+    margin: 2px 4px;
+}
+
+.advanced-url .field-pagefinder .recordname {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.advanced-url .field-pagefinder .pagefinder-control-toolbar {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.advanced-url .field-pagefinder .pagefinder-control-toolbar .control-button {
+    font-size: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.advanced-url .field-pagefinder .pagefinder-control-toolbar .control-button i {
+    font-size: 16px;
+}
+
+.advanced-url-extra,
+.advanced-url-label {
+    margin-top: 6px;
 }

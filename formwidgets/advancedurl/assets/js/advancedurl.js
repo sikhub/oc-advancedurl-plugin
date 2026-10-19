@@ -16,7 +16,17 @@
             $(this).toggle($(this).attr('data-advanced-url-section') === sectionFor(kind));
         });
 
-        $root.find('.control-balloon-selector li[data-value="' + target + '"]').trigger('click');
+        $root.find('[data-advanced-url-target]').val(target).trigger('change');
+    });
+
+    $(document).on('click', '[data-advanced-url-toggle]', function () {
+        var $extra = $(this).closest('[data-advanced-url]').find('[data-advanced-url-extra]');
+
+        $extra.toggle();
+
+        if ($extra.is(':visible')) {
+            $extra.find('input').trigger('focus');
+        }
     });
 
 }(window.jQuery);
