@@ -122,6 +122,11 @@ class Link
             $url = substr($url, strlen($kind));
         }
 
+        // a phone number is stored dialable (no spaces); LinkCleaner fixes older values on output
+        if ($kind === 'tel:') {
+            $url = LinkCleaner::phone($url);
+        }
+
         $link['type'] = $kind;
         $link['url'] = $url;
 
